@@ -36,4 +36,11 @@ c.hints.selectors["code"] = [
 ...
 ```
 
-Note default behaviour for code snippets running multiple lines is to join them all on one line split with semicolons.
+4. Optionally install the python [pyperclip](https://github.com/asweigart/pyperclip) module for better multiline copying:
+
+```
+pip3 install pyperclip --user
+```
+
+### Multiline Copying
+Without pyperclip the default behaviour for code snippets spanning multiple lines is to join them all on one line, with semicolons separating the previously seperate lines.
