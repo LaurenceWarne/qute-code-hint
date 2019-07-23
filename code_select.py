@@ -2,28 +2,26 @@
 
 import os
 import html
-from html.parser import HTMLParser
+import re
+import sys
+import xml.etree.ElementTree as ET
 
 
-class CodeParser(HTMLParser):
-
-    def __init__(self, delimiter=";"):
-        super().__init__()
-        self.last_handled_data = ""
-        self.delimiter = delimiter
-
-    def handle_data(self, data):
-        self.last_handled_data = html.unescape(data)
-        self.last_handled_data = self.last_handled_data.replace(
-            "\n", self.delimiter
-        )
+def parse_text_content(element):
+    root = ET.fromstring(element)
+    text = ET.tostring(root, encoding="unicode", method="text")
+    text = html.unescape(text)
+    return text
 
 
 def main():
+    delimiter = sys.argv[1] if len(sys.argv) > 1 else ";"
+    # For info on qute environment vairables, see
+    #https://github.com/qutebrowser/qutebrowser/blob/master/doc/userscripts.asciidoc
     element = os.environ.get("QUTE_SELECTED_HTML")
-    parser = CodeParser()
-    parser.feed(element)
-    code_text = parser.last_handled_data
+    code_text = parse_text_content(element)
+    code_text = re.sub("(\n)+", delimiter, code_text)
+    code_text = code_text.replace("'", "\"")
     with open(os.environ.get("QUTE_FIFO"), "w") as f:
         f.write("yank inline '{code}'\n".format(code=code_text))
 
