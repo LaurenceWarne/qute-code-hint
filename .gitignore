@@ -1,0 +1,231 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# PyInstaller
+#  Usually these files are written by a python script from a template
+#  before PyInstaller builds the exe, so as to inject date/other infos into it.
+*.manifest
+*.spec
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+.hypothesis/
+
+# Translations
+*.mo
+*.pot
+
+# Django stuff:
+*.log
+local_settings.py
+
+# Flask stuff:
+instance/
+.webassets-cache
+
+# Scrapy stuff:
+.scrapy
+
+# Sphinx documentation
+docs/_build/
+
+# PyBuilder
+target/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# pyenv
+.python-version
+
+# celery beat schedule file
+celerybeat-schedule
+
+# SageMath parsed files
+*.sage.py
+
+# Environments
+.env
+.venv
+env/
+venv/
+ENV/
+
+# Spyder project settings
+.spyderproject
+.spyproject
+
+# Rope project settings
+.ropeproject
+
+# mkdocs documentation
+/site
+
+# mypy
+.mypy_cache/
+
+# emacs files
+*~
+
+## Java
+
+*.class
+*.war
+*.ear
+hs_err_pid*
+
+## Robovm
+/ios/robovm-build/
+
+## GWT
+/html/war/
+/html/gwt-unitCache/
+.apt_generated/
+.gwt/
+gwt-unitCache/
+www-test/
+.gwt-tmp/
+
+## Android Studio and Intellij and Android in general
+/android/libs/armeabi/
+/android/libs/armeabi-v7a/
+/android/libs/arm64-v8a/
+/android/libs/x86/
+/android/libs/x86_64/
+/android/gen/
+.idea/
+*.ipr
+*.iws
+*.iml
+/android/out/
+com_crashlytics_export_strings.xml
+
+## Eclipse
+
+.classpath
+.project
+.metadata/
+/android/bin/
+/core/bin/
+/desktop/bin/
+/html/bin/
+/ios/bin/
+/ios-moe/bin/
+*.tmp
+*.bak
+*.swp
+*~.nib
+.settings/
+.loadpath
+.externalToolBuilders/
+*.launch
+
+## NetBeans
+
+/nbproject/private/
+/android/nbproject/private/
+/core/nbproject/private/
+/desktop/nbproject/private/
+/html/nbproject/private/
+/ios/nbproject/private/
+/ios-moe/nbproject/private/
+
+/build/
+/android/build/
+/core/build/
+/desktop/build/
+/html/build/
+/ios/build/
+/ios-moe/build/
+
+/nbbuild/
+/android/nbbuild/
+/core/nbbuild/
+/desktop/nbbuild/
+/html/nbbuild/
+/ios/nbbuild/
+/ios-moe/nbbuild/
+
+/dist/
+/android/dist/
+/core/dist/
+/desktop/dist/
+/html/dist/
+/ios/dist/
+/ios-moe/dist/
+
+/nbdist/
+/android/nbdist/
+/core/nbdist/
+/desktop/nbdist/
+/html/nbdist/
+/ios/nbdist/
+/ios-moe/nbdist/
+
+nbactions.xml
+nb-configuration.xml
+
+## Gradle
+
+/local.properties
+.gradle/
+gradle-app.setting
+/build/
+/android/build/
+/core/build/
+/desktop/build/
+/html/build/
+/ios/build/
+/ios-moe/build/
+
+## OS Specific
+.DS_Store
+Thumbs.db
+
+## iOS
+/ios/xcode/*.xcodeproj/*
+!/ios/xcode/*.xcodeproj/xcshareddata
+!/ios/xcode/*.xcodeproj/project.pbxproj
+/ios/xcode/native/
+
+/ios-moe/xcode/*.xcodeproj/*
+!/ios-moe/xcode/*.xcodeproj/xcshareddata
+!/ios-moe/xcode/*.xcodeproj/project.pbxproj
+/ios-moe/xcode/native/
+
+*.sqlite3
+/include
