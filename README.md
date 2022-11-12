@@ -42,5 +42,11 @@ c.hints.selectors["code"] = [
 pip3 install pyperclip --user
 ```
 
+Pyperclip doesn't work on wayland so you can use [pyclip](https://github.com/spyoungtech/pyclip) instead:
+
+```
+pip3 install pyclip
+```
+
 ### Multiline Copying
-Without pyperclip the default behaviour for code snippets spanning multiple lines is to join them all on one line, with semicolons separating the previously seperate lines.
+Without pyperclip/pyclip the default behaviour for code snippets spanning multiple lines is to join them all on one line, with semicolons separating the previously seperate lines.

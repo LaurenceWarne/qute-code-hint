@@ -8,7 +8,12 @@ import xml.etree.ElementTree as ET
 try:
     import pyperclip
 except ImportError:
-    PYPERCLIP = False
+    try:
+        import pyclip as pyperclip
+    except ImportError:
+        PYPERCLIP = False
+    else:
+        PYPERCLIP = True
 else:
     PYPERCLIP = True
 
