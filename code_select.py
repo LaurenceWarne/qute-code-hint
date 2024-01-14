@@ -19,7 +19,12 @@ else:
 
 
 def parse_text_content(element):
-    root = ET.fromstring(element)
+    # https://stackoverflow.com/a/35591507/15245191
+    magic = '''<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+                "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd" [
+                <!ENTITY nbsp ' '>
+                ]>'''
+    root = ET.fromstring(magic + element)
     text = ET.tostring(root, encoding="unicode", method="text")
     text = html.unescape(text)
     return text
