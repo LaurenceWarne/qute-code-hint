@@ -14,13 +14,13 @@ Copying to clipboard:
 
 1. Download the script:
 
-```
+```bash
 wget https://raw.githubusercontent.com/LaurenceWarne/qute-code-hint/master/code_select.py -O ~/.local/share/qutebrowser/userscripts/code_select.py
 ```
 
 2. In your qutebrowser config file create a new custom group for code:
 
-```
+```python
 c.hints.selectors["code"] = [
     # Selects all code tags whose direct parent is not a pre tag
     ":not(pre) > code",
@@ -30,7 +30,7 @@ c.hints.selectors["code"] = [
 
 3. Bind the userscript using a keybinding of your choice:
 
-```
+```python
 ...
 '<ctrl-#>': 'hint code userscript code_select.py',
 ...
@@ -38,13 +38,15 @@ c.hints.selectors["code"] = [
 
 4. Optionally install the python [pyperclip](https://github.com/asweigart/pyperclip) module for better multiline copying:
 
-```
+```bash
 pip3 install pyperclip --user
+# Alternatively for PEP 668 compliance, you can install from your package manager, e.g.
+sudo apt install python3-pyperclip
 ```
 
-Pyperclip doesn't work on wayland so you can use [pyclip](https://github.com/spyoungtech/pyclip) instead:
+If you're having issues with `pyperclip`, you can use [pyclip](https://github.com/spyoungtech/pyclip) instead:
 
-```
+```bash
 pip3 install pyclip
 ```
 
