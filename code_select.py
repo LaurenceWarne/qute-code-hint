@@ -45,7 +45,7 @@ def main():
         pyperclip.copy(code_text)
         send_command_to_qute(
             "message-info 'copied to clipboard: {info}{suffix}'".format(
-                info=code_text.splitlines()[0],
+                info=code_text.splitlines()[0].replace("'", "\""),
                 suffix="..." if len(code_text.splitlines()) > 1 else ""
             )
         )
