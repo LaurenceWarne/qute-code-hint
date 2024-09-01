@@ -41,6 +41,8 @@ def main():
     # https://github.com/qutebrowser/qutebrowser/blob/master/doc/userscripts.asciidoc
     element = os.environ.get("QUTE_SELECTED_HTML")
     code_text = parse_text_content(element)
+    re_remove_dollars = re.compile(r"^(\$ )", re.MULTILINE)
+    code_text = re.sub(re_remove_dollars, '', code_text)
     if PYPERCLIP:
         pyperclip.copy(code_text)
         send_command_to_qute(
